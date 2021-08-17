@@ -22,11 +22,11 @@ def connect():
     return render_template("contact.html")
 
 
-@app.route("/post/<string:title>")
-def show_post(title):
+@app.route("/post/<int:index>")
+def show_post(index):
     requested_post = None
     for post in all_posts:
-        if post['title'] == title:
+        if post['id'] == index:
             return render_template("post.html", requested_post=post)
 
 
