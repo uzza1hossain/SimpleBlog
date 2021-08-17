@@ -24,7 +24,7 @@
                     <!-- Post preview-->
                     {% for post in all_posts %}
                         <div class="post-preview">
-                            <a href="{{ url_for('show_post', index=post.id) }}">
+                            <a href="{{ url_for('show_post', title=post.title) }}">
                                 <img src="{{ post.image }}">
                                 <h2 class="post-title">
                                     {{ post.title }}
